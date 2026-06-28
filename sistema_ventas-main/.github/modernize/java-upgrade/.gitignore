@@ -1,0 +1,15 @@
+# Node / Angular
+node_modules/
+.angular/
+dist/
+
+# Java / Spring Boot
+target/
+.gradle/
+build/
+.idea/
+*.iml
+
+# Sistema
+.DS_Store
+Thumbs.db

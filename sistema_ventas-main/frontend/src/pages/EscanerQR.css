@@ -1,0 +1,871 @@
+/* EscanerQR.css */
+.qr-page {
+    padding-top: 94px;
+    padding-bottom: 50px;
+}
+
+.qr-title-header {
+    margin-bottom: 28px;
+}
+
+.qr-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.025em;
+    margin: 0;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    background: linear-gradient(135deg, #1e1b4b 0%, #4f46e5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.qr-subtitle {
+    font-size: 14px;
+    color: #64748b;
+    margin: 6px 0 0 0;
+    font-weight: 500;
+}
+
+.qr-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 24px;
+    margin-bottom: 30px;
+    align-items: start;
+}
+
+@media (max-width: 992px) {
+    .qr-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-header-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+}
+
+.card-icon {
+    font-size: 22px;
+}
+
+.card-header-icon h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.qr-reader {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+#reader__scan_region {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.scanner-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+}
+
+.placeholder-icon-check {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.scanner-placeholder p {
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.empty-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+    color: #94a3b8;
+}
+
+.qr-icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+    opacity: 0.3;
+}
+
+.empty-result p {
+    font-size: 14px;
+    max-width: 320px;
+    line-height: 1.5;
+}
+
+/* Result detalis */
+.qr-detalle-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 12px;
+}
+
+.qr-model-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #f8fafc;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #f1f5f9;
+}
+
+.qr-model-avatar {
+    width: 64px;
+    height: 64px;
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border: 1px solid #e2e8f0;
+}
+
+.qr-model-avatar img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.qr-model-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.qr-model-meta h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.qr-brand-badge {
+    font-size: 11px;
+    font-weight: 700;
+    background-color: #e0e7ff;
+    color: #4f46e5;
+    padding: 2px 8px;
+    border-radius: 100px;
+    text-transform: uppercase;
+}
+
+.qr-red-badge {
+    font-size: 11px;
+    font-weight: 700;
+    background-color: #f1f5f9;
+    color: #475569;
+    padding: 2px 8px;
+    border-radius: 100px;
+    margin-left: 6px;
+    display: inline-block;
+}
+
+/* Specs Grid */
+.specs-accordion h5,
+.imei-list-section h5,
+.audit-specs-card h4,
+.audit-status-card h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #4f46e5;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #e0e7ff;
+    padding-bottom: 6px;
+}
+
+.qr-specs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 20px;
+    background-color: #fafbfc;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #f1f5f9;
+}
+
+.qr-spec-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.qr-spec-item span {
+    font-size: 11px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.qr-spec-item strong {
+    font-size: 13px;
+    color: #1e293b;
+    font-weight: 700;
+}
+
+/* Scrollable IMEI List */
+.imei-list-scroll {
+    max-height: 220px;
+    overflow-y: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: white;
+}
+
+.imei-audit-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.imei-audit-table th {
+    background: #f8fafc;
+    padding: 10px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.imei-audit-table td {
+    padding: 10px 14px;
+    font-size: 13px;
+    color: #334155;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.imei-audit-table tr:last-child td {
+    border-bottom: none;
+}
+
+.no-imeis-text {
+    font-size: 13px;
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 10px;
+}
+
+/* Badges */
+.estado-badge {
+    padding: 4px 10px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    letter-spacing: 0.02em;
+}
+
+.estado-badge.disponible {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+.estado-badge.vendido {
+    background-color: #fee2e2;
+    color: #ef4444;
+}
+
+/* Manual IMEI Search Form */
+.section-desc {
+    font-size: 14px;
+    color: #64748b;
+    margin: -10px 0 20px 0;
+}
+
+.imei-search-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    max-width: 580px;
+}
+
+.imei-search-input {
+    flex: 1;
+    padding: 11px 16px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    background-color: #f8fafc;
+    font-size: 14px;
+    color: #1e293b;
+    font-family: monospace;
+    letter-spacing: 0.05em;
+    font-size: 16px;
+}
+
+.imei-search-input:focus {
+    background-color: white;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+    outline: none;
+}
+
+/* Audit results */
+.audit-empty-state {
+    padding: 30px;
+    text-align: center;
+    color: #94a3b8;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px dashed #e2e8f0;
+    font-size: 14px;
+}
+
+.audit-split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@media (max-width: 992px) {
+    .audit-split-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.audit-specs-card,
+.audit-status-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.audit-device-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    background: #f8fafc;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.audit-device-img {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border: 1px solid #e2e8f0;
+}
+
+.audit-device-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.audit-device-meta h5 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.specs-list-audit {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.spec-audit-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    border-bottom: 1px dashed #f1f5f9;
+    padding-bottom: 6px;
+}
+
+.spec-audit-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.spec-audit-row span {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.spec-audit-row strong {
+    color: #1e293b;
+    font-weight: 700;
+}
+
+/* Status Audit panel */
+.audit-status-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #f8fafc;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid #f1f5f9;
+    font-weight: 600;
+    color: #475569;
+}
+
+.imei-available-banner {
+    display: flex;
+    gap: 16px;
+    background-color: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.banner-icon {
+    width: 36px;
+    height: 36px;
+    background-color: #dcfce7;
+    color: #16a34a;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.banner-text h5 {
+    margin: 0 0 6px 0;
+    font-size: 14px;
+    font-weight: 800;
+    color: #15803d;
+}
+
+.banner-text p {
+    margin: 0;
+    font-size: 13px;
+    color: #166534;
+    line-height: 1.5;
+}
+
+/* Buyer card details */
+.buyer-info-card {
+    background: #fff;
+    border: 1px solid #f1f5f9;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.buyer-info-card h5 {
+    font-size: 13px;
+    font-weight: 800;
+    color: #475569;
+    margin-top: 0;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.buyer-details-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.buyer-detail-item {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #f8fafc;
+    padding-bottom: 8px;
+}
+
+.buyer-detail-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.buyer-detail-item span {
+    font-size: 11px;
+    color: #94a3b8;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.buyer-detail-item strong {
+    font-size: 14px;
+    color: #1e293b;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.qr-loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    color: #64748b;
+}
+
+.font-mono {
+    font-family: monospace;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+/* Escaner QR details layout styling */
+.qr-badges-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.qr-stock-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.qr-stock-label {
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.stock-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.stock-green {
+    background-color: #dcfce7;
+    color: #16a34a;
+    border: 1px solid #bbf7d0;
+}
+
+.stock-red {
+    background-color: #fee2e2;
+    color: #ef4444;
+    border: 1px solid #fecaca;
+}
+
+.btn-reset-scanner {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #4f46e5 0%, #3b32d1 100%);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.btn-reset-scanner:hover {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
+    transform: translateY(-1px);
+}
+
+.btn-reset-scanner:active {
+    transform: translateY(0);
+}
+
+.reset-scanner-btn-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Card Blanca para la Auditoria por IMEI (Función 2) */
+.imei-auditor-section {
+    background: #ffffff !important; /* white card */
+    color: #1e293b !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+    border-radius: 16px !important;
+    padding: 30px !important;
+    margin-top: 45px !important; /* separation from Función 1 */
+}
+
+.imei-auditor-section h3 {
+    color: #1e293b !important;
+}
+
+.imei-auditor-section .section-desc {
+    color: #64748b !important;
+}
+
+/* Inner cards inside Auditor section */
+.imei-auditor-section .audit-specs-card,
+.imei-auditor-section .audit-status-card {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    color: #1e293b !important;
+    padding: 24px !important;
+    border-radius: 12px !important;
+}
+
+.imei-auditor-section .audit-device-row {
+    background: #f8fafc !important;
+    border: 1px solid #f1f5f9 !important;
+    padding: 14px !important;
+    border-radius: 10px !important;
+}
+
+.imei-auditor-section .audit-device-meta h5 {
+    color: #0f172a !important;
+}
+
+.imei-auditor-section .spec-audit-row {
+    border-bottom: 1px dashed #f1f5f9 !important;
+}
+
+.imei-auditor-section .spec-audit-row span {
+    color: #64748b !important;
+}
+
+.imei-auditor-section .spec-audit-row strong {
+    color: #1e293b !important;
+}
+
+.imei-auditor-section .audit-status-header {
+    background: #f8fafc !important;
+    border: 1px solid #f1f5f9 !important;
+    color: #475569 !important;
+}
+
+.imei-auditor-section .buyer-info-card {
+    background: #ffffff !important;
+    border: 1px solid #f1f5f9 !important;
+    padding: 20px !important;
+}
+
+.imei-auditor-section .buyer-info-card h5 {
+    color: #475569 !important;
+}
+
+.imei-auditor-section .buyer-detail-item {
+    border-bottom: 1px solid #f8fafc !important;
+}
+
+.imei-auditor-section .buyer-detail-item span {
+    color: #94a3b8 !important;
+}
+
+.imei-auditor-section .buyer-detail-item strong {
+    color: #1e293b !important;
+}
+
+.imei-auditor-section .audit-empty-state {
+    background: #f8fafc !important;
+    border: 1px dashed #e2e8f0 !important;
+    color: #94a3b8 !important;
+}
+
+/* Estandarización de imágenes de productos de forma simétrica */
+.qr-model-image-hero {
+    width: 100%;
+    height: 220px;
+    background: radial-gradient(circle, #ffffff 0%, #f8fafc 100%);
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    padding: 16px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+}
+
+.qr-model-image-hero:hover {
+    border-color: #cbd5e1;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02), 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.qr-hero-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.qr-model-image-hero:hover .qr-hero-img {
+    transform: scale(1.05);
+}
+
+.qr-model-meta-new, .audit-device-meta-new {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-bottom: 16px;
+}
+
+.qr-model-meta-new h4, .audit-device-meta-new h5 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+/* Soporte Responsivo Móvil (< 768px) */
+@media (max-width: 767px) {
+    .qr-page {
+        padding-top: 80px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    
+    .qr-title {
+        font-size: 22px;
+        text-align: center;
+    }
+    
+    .qr-subtitle {
+        font-size: 13px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .qr-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+        margin-bottom: 24px;
+    }
+
+    .audit-split-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    /* Reducción proporcional del visor de cámara */
+    .qr-reader {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    
+    #reader {
+        width: 100% !important;
+    }
+
+    /* Ajuste de fuentes y paddings optimizados */
+    .qr-detalle-container {
+        padding: 4px;
+    }
+
+    .qr-specs-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        padding: 14px !important;
+    }
+
+    .qr-spec-item span {
+        font-size: 10px;
+    }
+
+    .qr-spec-item strong {
+        font-size: 12px;
+    }
+
+    /* Botones touch-friendly (grandes y fáciles de presionar) */
+    .btn-reset-scanner, 
+    .btn-new-model, 
+    .imei-search-form button {
+        width: 100% !important;
+        padding: 14px 20px !important;
+        font-size: 15px !important;
+        min-height: 48px;
+    }
+
+    .imei-search-form {
+        flex-direction: column !important;
+        gap: 10px !important;
+        max-width: 100% !important;
+    }
+
+    .imei-search-input {
+        width: 100% !important;
+        padding: 14px !important;
+        min-height: 48px;
+    }
+
+    .imei-auditor-section {
+        padding: 20px !important;
+        margin-top: 30px !important;
+    }
+
+    .audit-specs-card, 
+    .audit-status-card {
+        padding: 16px !important;
+    }
+
+    /* Evitar que la tabla de resultados del IMEI manual rompa el layout */
+    .imei-audit-results,
+    .imei-list-scroll {
+        width: 100% !important;
+        overflow-x: auto !important;
+    }
+}
+
+
+

@@ -1,0 +1,304 @@
+/* Ventas.css */
+.ventas-page {
+    padding-top: 100px;
+}
+
+.ventas-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+.productos-section h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.productos-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.producto-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.producto-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.producto-img {
+    height: 150px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.producto-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.img-placeholder {
+    color: #999;
+    font-size: 12px;
+}
+
+.producto-info h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.marca-badge {
+    font-size: 11px;
+    background: #e3f2fd;
+    color: #1976D2;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.precio-stock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.precio {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2196F3;
+}
+
+.stock-text {
+    font-size: 13px;
+    color: #4CAF50;
+}
+
+.stock-text.low {
+    color: #FF9800;
+}
+
+.carrito-section {
+    position: sticky;
+    top: 100px;
+    height: calc(100vh - 140px);
+    display: flex;
+    flex-direction: column;
+}
+
+.carrito-section h2 {
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+.empty-cart {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px dashed #ccc;
+}
+
+.carrito-items {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 16px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item-details h4 {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.item-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.item-actions button {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-actions .remove-btn {
+    border: none;
+    color: #f44336;
+    margin-left: 8px;
+}
+
+.pago-section {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 16px;
+    margin: 8px 0 12px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 13px;
+    margin-bottom: 4px;
+    color: #666;
+}
+
+.cuotas-config {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.resumen-section {
+    border-top: 2px dashed #eee;
+    padding-top: 16px;
+    margin-bottom: 16px;
+}
+
+.resumen-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.resumen-row.discount { color: #4CAF50; }
+.resumen-row.interest { color: #FF9800; }
+
+.resumen-row.total {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+}
+
+.resumen-row.cuota-monto {
+    color: #1976D2;
+    font-weight: 600;
+}
+
+.cart-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+/* Custom styles for IMEI selection and client form in cart */
+.cart-item-container {
+    border-bottom: 1px solid #eee;
+    padding: 12px 0;
+}
+
+.cart-item-container .cart-item {
+    border-bottom: none;
+    padding: 0 0 8px 0;
+}
+
+.cart-item-imeis {
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid #eef0f2;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.imei-input-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.imei-input-row label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #666;
+    white-space: nowrap;
+    width: 60px;
+}
+
+.imei-input-row input {
+    flex: 1;
+    padding: 5px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: monospace;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.imei-input-row input:focus {
+    border-color: #2196F3;
+}
+
+.cliente-form-section {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px dashed #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cliente-form-section h3 {
+    font-size: 15px;
+    margin: 0;
+    color: #333;
+    font-weight: 600;
+}
+
+.form-row-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+

@@ -1,0 +1,178 @@
+/* Navbar.css */
+.navbar {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 70px;
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #1e1b4b;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: 'Outfit', 'Inter', sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.navbar-brand-icon {
+  font-size: 1.6rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover .navbar-brand-icon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(241, 245, 249, 0.8);
+  padding: 4px;
+  border-radius: 12px;
+  border: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.navbar-link {
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #475569;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.navbar-link:hover {
+  color: #1e293b;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.navbar-link.active {
+  background: #ffffff;
+  color: #4f46e5;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.navbar-username {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.navbar-role-badge {
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.navbar-role-badge.admin {
+  background: #e0e7ff;
+  color: #4f46e5;
+}
+
+.navbar-role-badge.vendedor {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.navbar-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  background: rgba(254, 242, 242, 0.6);
+  color: #dc2626;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.navbar-logout-btn:hover {
+  background: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
+  box-shadow: 0 4px 10px rgba(220, 38, 38, 0.25);
+}
+
+@media (max-width: 1200px) {
+  .navbar-container {
+    padding: 0 16px;
+  }
+  .navbar-links {
+    gap: 2px;
+  }
+  .navbar-link {
+    padding: 6px 12px;
+    font-size: 0.82rem;
+  }
+  .navbar-username {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    height: auto;
+    padding: 10px 0;
+    position: static;
+  }
+  .navbar-container {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+  }
+  .navbar-links {
+    order: 3;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar-link {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+  .navbar-user {
+    width: 100%;
+    justify-content: center;
+  }
+}

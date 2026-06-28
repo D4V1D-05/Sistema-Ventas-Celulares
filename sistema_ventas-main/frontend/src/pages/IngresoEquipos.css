@@ -1,0 +1,135 @@
+/* IngresoEquipos.css */
+.ingresos-page {
+    padding-top: 100px;
+}
+
+.ingresos-header {
+    margin-bottom: 24px;
+}
+
+.ingresos-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 24px;
+    align-items: start;
+}
+
+@media (max-width: 992px) {
+    .ingresos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.ingresos-form-section h3,
+.ingresos-list-section h3 {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.form-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+}
+
+.warning-text {
+    color: #FF9800;
+    font-size: 11px;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.list-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+}
+
+.list-header-row h3 {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.search-box-small {
+    width: 250px;
+}
+
+.search-input-small {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 13px;
+}
+
+.table-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    color: #666;
+}
+
+.spinner-small {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #2196F3;
+    border-radius: 50%;
+    animation: spin-small 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes spin-small {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.date-cell {
+    font-size: 13px;
+    color: #555;
+}
+
+.empresa-name {
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.qty-cell {
+    font-weight: 600;
+}
+
+.text-muted {
+    color: #aaa;
+}
+
+.action-buttons-cell {
+    display: flex;
+    gap: 8px;
+}
+
+.action-buttons-cell button {
+    margin: 0;
+}
+
+.w-100 {
+    width: 100%;
+}
