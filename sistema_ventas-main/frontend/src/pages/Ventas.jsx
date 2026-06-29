@@ -18,7 +18,6 @@ const Ventas = () => {
     const [clienteNombre, setClienteNombre] = useState('');
     const [clienteDocumento, setClienteDocumento] = useState('');
     const [clienteTelefono, setClienteTelefono] = useState('');
-    const [clienteDireccion, setClienteDireccion] = useState('');
 
     // Available IMEIs state
     const [imeisDisponiblesMap, setImeisDisponiblesMap] = useState({});
@@ -131,6 +130,12 @@ const Ventas = () => {
         if (!clienteNombre.trim() || !clienteDocumento.trim() || !clienteTelefono.trim()) {
             return toast.error('Debe completar todos los datos del cliente');
         }
+        if (clienteDocumento.length !== 8 && clienteDocumento.length !== 11) {
+            return toast.error('El DNI debe tener 8 dígitos o el RUC debe tener 11 dígitos');
+        }
+        if (clienteTelefono.length !== 9) {
+            return toast.error('El teléfono debe tener exactamente 9 dígitos');
+        }
 
         // IMEI validations
         for (const item of carrito) {
@@ -165,7 +170,6 @@ const Ventas = () => {
                 clienteNombre: clienteNombre.trim(),
                 clienteDocumento: clienteDocumento.trim(),
                 clienteTelefono: clienteTelefono.trim(),
-                clienteDireccion: clienteDireccion.trim(),
                 items: carrito.map(item => ({
                     productoId: item.productoId,
                     cantidad: item.cantidad,
@@ -181,7 +185,6 @@ const Ventas = () => {
             setClienteNombre('');
             setClienteDocumento('');
             setClienteTelefono('');
-            setClienteDireccion('');
             fetchProductos();
         } catch (error) {
             toast.error(error.response?.data?.message || 'Error al registrar la venta');
@@ -288,7 +291,13 @@ const Ventas = () => {
                                             type="text"
                                             placeholder="Ej: 12345678"
                                             value={clienteDocumento}
-                                            onChange={(e) => setClienteDocumento(e.target.value)}
+                                            onChange={(e) => {
+                                                const val = e.target.value.replace(/\D/g, '');
+                                                if (val.length <= 11) {
+                                                    setClienteDocumento(val);
+                                                }
+                                            }}
+                                            maxLength={11}
                                             required
                                         />
                                     </div>
@@ -298,19 +307,16 @@ const Ventas = () => {
                                             type="text"
                                             placeholder="Ej: 987654321"
                                             value={clienteTelefono}
-                                            onChange={(e) => setClienteTelefono(e.target.value)}
+                                            onChange={(e) => {
+                                                const val = e.target.value.replace(/\D/g, '');
+                                                if (val.length <= 9) {
+                                                    setClienteTelefono(val);
+                                                }
+                                            }}
+                                            maxLength={9}
                                             required
                                         />
                                     </div>
-                                </div>
-                                <div className="form-group" style={{ marginTop: '12px' }}>
-                                    <label>Dirección</label>
-                                    <input
-                                        type="text"
-                                        placeholder="Ej: Av. Larco 123, Lima"
-                                        value={clienteDireccion}
-                                        onChange={(e) => setClienteDireccion(e.target.value)}
-                                    />
                                 </div>
                             </div>
                         </>

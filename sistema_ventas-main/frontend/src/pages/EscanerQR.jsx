@@ -370,10 +370,6 @@ const EscanerQR = () => {
                                                 <strong>{imeiResult.cliente.telefono || 'N/A'}</strong>
                                             </div>
                                             <div className="buyer-detail-item">
-                                                <span>Dirección de Entrega / Domicilio</span>
-                                                <strong>{imeiResult.cliente.direccion || 'No especificada'}</strong>
-                                            </div>
-                                            <div className="buyer-detail-item">
                                                 <span>Fecha y Hora de la Operación</span>
                                                 <strong>{new Date(imeiResult.cliente.fechaVenta).toLocaleString('es-MX')}</strong>
                                             </div>
