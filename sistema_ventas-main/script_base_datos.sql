@@ -85,7 +85,6 @@ CREATE TABLE ventas (
     cliente_nombre VARCHAR(150),
     cliente_documento VARCHAR(20),
     cliente_telefono VARCHAR(20),
-    cliente_direccion VARCHAR(250),
     CONSTRAINT fk_ventas_vendedor FOREIGN KEY (vendedor_id) REFERENCES usuarios (id) ON DELETE RESTRICT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
